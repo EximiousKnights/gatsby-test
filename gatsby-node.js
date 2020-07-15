@@ -68,7 +68,7 @@ exports.createPages = async function ({ actions, graphql }) {
 
   //Create Individual Page
   const pageEdges = data.allMdx.edges.filter(
-    edge => edge.node.fields.collection === "pages"
+    edge => edge.node.fields.collection === "mdxpages"
   )
   pageEdges.forEach(edge => {
     const slug = edge.node.fields.slug
@@ -102,7 +102,6 @@ exports.onCreateNode = ({ node, getNode, actions }) => {
     const parent = getNode(_.get(node, "parent"))
     const parentName = _.get(parent, "sourceInstanceName")
     const slug = createFilePath({ node, getNode, basePath: parentName })
-    console.log(slug)
     createNodeField({
       node,
       name: `slug`,

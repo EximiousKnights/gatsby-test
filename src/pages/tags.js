@@ -40,7 +40,7 @@ const TagsPage = ({
     <Content>
       <Post>
         <h1>All Posts</h1>
-        {/* <Img fixed={data.imageSharp.fixed} draggable={false} alt="Posts"></Img> */}
+        <Img fixed={data.imageSharp.fixed} draggable={false} alt="Posts"></Img>
         Tags:
         <ul>
           {group.map(tag => (
