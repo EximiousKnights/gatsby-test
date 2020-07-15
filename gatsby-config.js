@@ -78,6 +78,13 @@ module.exports = {
         path: `${__dirname}/src/mdxpages`,
       },
     },
+    {
+      resolve: `gatsby-source-filesystem`,
+      options: {
+        name: `static_images`,
+        path: `static`,
+      },
+    },
     `gatsby-plugin-sharp`,
     `gatsby-transformer-sharp`,
     {
